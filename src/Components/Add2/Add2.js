@@ -24,7 +24,7 @@ const Add2 = () => {
     formData.append("image", selectedImage);
 
     try {
-      const res = await fetch("http://localhost:5000/api/upload-emb", {
+      const res = await fetch("https://mernback-004m.onrender.com/api/upload-emb", {
         method: "POST",
         body: formData,
       });

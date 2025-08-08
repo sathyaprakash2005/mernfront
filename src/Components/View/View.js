@@ -10,7 +10,7 @@ const View = () => {
 
   // Fetch images
   useEffect(() => {
-    fetch('http://localhost:5000/images') // for saree
+    fetch('https://mernback-004m.onrender.com/images') // for saree
       .then(res => res.json())
       .then(data => {
         setImages(data);
@@ -25,7 +25,7 @@ const View = () => {
   // Delete handler
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/delete/${id}`);
+      const res = await axios.delete(`https://mernback-004m.onrender.com/api/delete/${id}`);
       alert(res.data.message);
       // Remove deleted image from state
       setImages(prev => prev.filter(img => img._id !== id));

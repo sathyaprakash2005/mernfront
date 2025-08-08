@@ -12,7 +12,7 @@ const Views = () => {
   const containerRef = useRef();
 
   useEffect(() => {
-    fetch('http://localhost:5000/images')
+    fetch('https://mernback-004m.onrender.com/images')
       .then(res => res.json())
       .then(data => {
         const imageList = Array.isArray(data) ? data : data.images || [];
@@ -59,7 +59,7 @@ const Views = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/orders', {
+      const res = await fetch('https://mernback-004m.onrender.com/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(order)

@@ -8,7 +8,7 @@ const Order = () => {
   const [deleteId, setDeleteId] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/orders')
+    fetch('https://mernback-004m.onrender.com/api/orders')
       .then(res => res.json())
       .then(data => {
         setOrders(data);
@@ -27,7 +27,7 @@ const Order = () => {
 
   const handleDeleteConfirmed = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${deleteId}`, {
+      const res = await fetch(`https://mernback-004m.onrender.com/api/orders/${deleteId}`, {
         method: 'DELETE',
       });
       const data = await res.json();

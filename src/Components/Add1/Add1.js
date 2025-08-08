@@ -24,7 +24,7 @@ const Add1 = () => {
     formData.append("image", selectedImage);
 
     try {
-      const res = await fetch("http://localhost:5000/api/upload-chudi", {
+      const res = await fetch("https://mernback-004m.onrender.com/api/upload-chudi", {
         method: "POST",
         body: formData,
       });

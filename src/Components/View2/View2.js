@@ -9,7 +9,7 @@ const View2 = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/images2')
+    fetch('https://mernback-004m.onrender.com/images2')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched images:", data); // You can check this
@@ -23,7 +23,7 @@ const View2 = () => {
   }, []);
   const handleDelete = async (id) => {
         try {
-          const res = await axios.delete(`http://localhost:5000/api/delete2/${id}`);
+          const res = await axios.delete(`https://mernback-004m.onrender.com/api/delete2/${id}`);
           alert(res.data.message);
           // Remove deleted image from state
           setImages(prev => prev.filter(img => img._id !== id));

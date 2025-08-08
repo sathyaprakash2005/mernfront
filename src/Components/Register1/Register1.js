@@ -8,7 +8,7 @@ const Register1 = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await fetch("http://localhost:5000/api/register1", {
+    const res = await fetch("https://mernback-004m.onrender.com/api/register1", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

@@ -13,7 +13,7 @@ const Login1 = ({ onLogin }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/login1", {
+      const res = await fetch("https://mernback-004m.onrender.com/api/login1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
