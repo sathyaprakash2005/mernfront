@@ -41,7 +41,7 @@ const Saree = () => {
   
    useEffect(() => {
   document.body.classList.add('saree-bg');
-  fetch('http://localhost:5000/sarees')
+  fetch('https://mernback-004m.onrender.com/sarees')
     .then(res => res.json())
     .then(data => {
       const formattedCards = data.map((item, index) => ({
